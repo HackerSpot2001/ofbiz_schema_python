@@ -1,0 +1,270 @@
+{
+    "info": {
+        "_postman_id": "a4460d55-3c00-4ddb-8f9f-50380c72dd06",
+        "name": "Party",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "whoami",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/account/whoami",
+                            "path": [
+                                "whoami"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "create user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/create_user",
+                            "path": [
+                                "create_user"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"suffix\": \"Sr\",\n  \"username\": \"acarnihang\",\n  \"first_name\": \"Alfons\",\n  \"middle_name\": \"Whipple\",\n  \"last_name\": \"Carnihan\",\n  \"email\": \"acarnihang@nymag.com\",\n  \"gender\": \"Male\",\n  \"marital_status\": \"single\",\n  \"dob\": \"1991-07-02\",\n  \"deceased_date\": \"1955-02-10\",\n  \"bio\": \"sunt in culpa qui officia deserunt mollit anim id est laborum.\",\n  \"marrige_date\": \"1953-03-29\",\n  \"password\": \"wI9@,zZ@>|PApqS\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/update_user",
+                            "path": [
+                                "update_user"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"suffix\": \"Jr\",\n  \"user_login_id\":\"acarnihang\",\n  \"username\": \"aazamj\",\n  \"first_name\": \"Aube\",\n  \"middle_name\": \"Estevez\",\n  \"last_name\": \"Azam\",\n  \"email\": \"aazamj@wufoo.com\",\n  \"gender\": \"Male\",\n  \"marital_status\": \"married\",\n  \"dob\": \"1956-10-27\",\n  \"bio\": \"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\",\n  \"group_name\":\"HACKERSPOT\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "logoff user",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/account/logoff",
+                            "path": [
+                                "logoff"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "login_user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/login_user",
+                            "path": [
+                                "login_user"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\":\"acarnihang\",\n  \"password\":\"wI9@,zZ@>|PApqS\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Contacts",
+            "item": [
+                {
+                    "name": "delete contact",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/account/delete_contact?contact_id=CON_NDSQYAQ2RLZWLOOTWNQX",
+                            "query": [
+                                {
+                                    "key": "contact_id",
+                                    "value": "CON_NDSQYAQ2RLZWLOOTWNQX"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "delete_contact"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "add_contact",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/add_contact",
+                            "path": [
+                                "add_contact"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"telephone\":\"98811818181\",\n  \"mobile\":\"9643561451\",\n  \"address\":\"Suite 13\",\n  \"email_address\":\"abc@mail.com\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update contact",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/update_contact",
+                            "path": [
+                                "update_contact"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"contact_id\":\"CON_ANAFGHSGWE5BSG2OF4IQ\",\n  \"email_address\":\"asagar@redgrape.tech\",\n  \"cm_purpose\":\"ANOTHER_EMAIL\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Business",
+            "item": [
+                {
+                    "name": "add_company",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/add_company",
+                            "path": [
+                                "add_company"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"group_name\":\"HACKERSPOT\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update company",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/account/update_company",
+                            "path": [
+                                "update_company"
+                            ],
+                            "host": [
+                                "account"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"pg_id\":\"PG_QSLC11YT3RT73F5DHU\",\n  \"group_name\":\"HELOL\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "upload pic",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "/account/upload_pic",
+                    "path": [
+                        "upload_pic"
+                    ],
+                    "host": [
+                        "account"
+                    ]
+                },
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "BUSINESS_LOGO",
+                            "src": "/home/hacker/Downloads/defaultProfile.png",
+                            "type": "file"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
